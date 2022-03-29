@@ -18,4 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/posts',"Api\UserController@index");
+Route::namespace('Api')->name('api')->group(function(){
+    Route::get('/posts',"UserController@index")->name('posts');
+    Route::get('/posts/{slug}',"UserController@show")->name('posts.show');
+});

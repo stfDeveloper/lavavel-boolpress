@@ -5,6 +5,7 @@ import Vue from "vue";
 
     import Home from "./pages/Home";
     import About from "./pages/About";
+    import Post from "./pages/Post";
 
 
 
@@ -20,6 +21,11 @@ import Vue from "vue";
                 path:"/about",
                 name:"About",
                 component: About
+            },
+            {
+                path:"/posts/:slug",
+                name:"Post",
+                component: Post
             }
         ]
     });

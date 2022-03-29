@@ -12,6 +12,7 @@
               <div v-else>
                   <img class="image" :src="emptyImage()" alt="">
               </div>
+          <router-link :to="{name:'Post',params:{slug: post.slug} }">watch</router-link>
           </div>
       </div>
   </div>
